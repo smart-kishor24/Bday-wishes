@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+  
+  h1, h2, h3, .font-serif-magic {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .font-handwriting {
+    font-family: 'Dancing Script', cursive;
+  }
+
+  .font-playful {
+    font-family: 'Fredoka', cursive;
+  }
+}
+
+/* Glassmorphism Styles */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.glass-panel-pink {
+  background: rgba(255, 192, 203, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 182, 193, 0.3);
+  box-shadow: 0 15px 35px rgba(236, 72, 153, 0.15), inset 0 1px 2px rgba(255, 255, 255, 0.4);
+}
+
+.glass-panel-gold {
+  background: rgba(254, 240, 138, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(251, 191, 36, 0.3);
+  box-shadow: 0 15px 35px rgba(245, 158, 11, 0.15), inset 0 1px 2px rgba(255, 255, 255, 0.4);
+}
+
+/* Custom Animated Gradient Text */
+.text-gradient-pink {
+  background: linear-gradient(135deg, #fce7f3 0%, #f472b6 50%, #c084fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #fef08a 0%, #f59e0b 50%, #fb7185 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-dream {
+  background: linear-gradient(135deg, #ffffff 0%, #fbcfe8 40%, #c084fc 70%, #93c5fd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glowing Border Effects */
+.glow-pink {
+  box-shadow: 0 0 25px rgba(244, 114, 182, 0.4), 0 0 50px rgba(192, 132, 252, 0.2);
+}
+
+.glow-gold {
+  box-shadow: 0 0 25px rgba(251, 191, 36, 0.4), 0 0 50px rgba(245, 158, 11, 0.2);
+}
+
+/* Custom Subtle Floating Animation */
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+}
+
+.animate-float-gentle {
+  animation: floatGentle 6s ease-in-out infinite;
+}
+
+/* Sparkle pulse animation */
+@keyframes pulseSparkle {
+  0%, 100% { opacity: 0.3; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+.animate-sparkle {
+  animation: pulseSparkle 3s ease-in-out infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0813;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(244, 114, 182, 0.3);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(244, 114, 182, 0.6);
+}
